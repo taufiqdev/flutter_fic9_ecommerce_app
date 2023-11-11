@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 
 import '../../common/constants/colors.dart';
 import '../../common/constants/images.dart';
+import '../account/account_page.dart';
+import '../home/home_page.dart';
 
 class DashboardPage extends StatefulWidget {
   const DashboardPage({super.key});
@@ -14,6 +16,7 @@ class _DashboardPageState extends State<DashboardPage> {
   int _selectedIndex = 0;
 
   final List<Widget> _pages = [
+    const HomePage(),
     /* const HomePage(),
     const CartPage(),
     const AccountPage(), */
@@ -21,7 +24,7 @@ class _DashboardPageState extends State<DashboardPage> {
       child: Text('Explore Page'),
     ),
     const Center(child: Text('Cart Page')),
-    const Center(child: Text('Account Page')),
+    const AccountPage(),
   ];
 
   void _onItemTapped(int index) {
